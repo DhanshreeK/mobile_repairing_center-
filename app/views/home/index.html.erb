@@ -34,7 +34,13 @@
 <div class="wrapper">
 
   <header class="main-header">
-
+<div class = "pull-right">
+ <% if user_signed_in? %>
+    <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'btn btn-danger'%>
+  <% else %>
+   
+  <% end %>
+  </div>
     <!-- Logo -->
     <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
@@ -108,7 +114,7 @@
         </li>
         <li>
           <a href="pages/widgets.html">
-            <i class="fa fa-th"></i> <span>Widgets</span>
+            <i class="fa fa-th"></i> <span>Add Employees</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>
             </span>

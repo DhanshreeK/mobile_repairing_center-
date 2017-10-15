@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Flaty User login Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+ 
+<!-- //Custom Theme files -->
+<!-- js -->
+
+<!-- //js -->  
+<!-- web font -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'><!--web font-->
+<!-- //web font -->
+</head>
+<body>
+  <!-- main -->
+
+  <div class="main-agileits">
+    <h1>Login</h1>
+    <div class="mainw3-agileinfo form">
+      <div id="login"> 
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+   <form action="#" method="post"> 
+          <div class="field-wrap">
+<label> Enter Your Email<span class="req">*</span> </label>
+    <%= f.email_field :email, autofocus: true %>
+</div> 
+          <div class="field-wrap">
+<label> Your Password<span class="req">*</span> </label>
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+   <div class="field-wrap">
+  <% if devise_mapping.rememberable? -%>
+   <div class="field-wrap">
+   <label>Remember Me<span class="req">*</span> </label>
+      <%= f.check_box :remember_me %>
+   
+    </div>
+
+  <% end -%>
+
+  <div class="actions">
+    <%= f.submit "Log in",class: "button button-block" %>
+  </div>
+<% end %>
+
+ 
+      
+  <!-- //main -->
+  <!-- copyright -->
+ 
+  <!-- //copyright --> 
+  <script>
+  $('.form').find('input, textarea').on('keyup blur focus', function (e) { 
+    var $this = $(this),
+      label = $this.prev('label');
+
+      if (e.type === 'keyup') {
+        if ($this.val() === '') {
+        label.removeClass('active highlight');
+      } else {
+        label.addClass('active highlight');
+      }
+    } else if (e.type === 'blur') {
+      if( $this.val() === '' ) {
+        label.removeClass('active highlight'); 
+        } else {
+        label.removeClass('highlight');   
+        }   
+    } else if (e.type === 'focus') {
+      
+      if( $this.val() === '' ) {
+        label.removeClass('highlight'); 
+        } 
+      else if( $this.val() !== '' ) {
+        label.addClass('highlight');
+        }
+    }
+ 
+  }); 
+  </script>
+</body>
+</html>
+
+
+
